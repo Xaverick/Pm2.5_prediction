@@ -1,9 +1,0 @@
-name: myenv  # Replace with your preferred environment name
-channels:
-  - defaults
-dependencies:
-  - python=3.9  # Replace with your preferred Python version
-  - jupyter
-  - pandas
-  - numpy
-  - matplotlib
