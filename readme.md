@@ -1,38 +1,79 @@
-# Project Name
+# PM2.5 Time-Series Prediction Using Machine Learning and Deep Learning
 
-This project uses a Conda environment that includes Jupyter, Pandas, NumPy, and Matplotlib for data analysis and visualization tasks. Follow the steps below to set up the environment and run the project.
+Air pollution, particularly PM2.5 (particulate matter smaller than 2.5 micrometres), poses severe risks to public health. This project aims to develop a machine learning model capable of forecasting PM2.5 concentrations using historical air quality and meteorological time series data. By providing actionable short-term forecasts, this predictive tool will help authorities and individuals manage air quality more effectively.
 
-## Prerequisites
+## Motivation
 
-Ensure you have either [Anaconda](https://www.anaconda.com/products/individual) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) installed on your system.
+Accurate PM2.5 predictions are critical but challenging due to the complex, nonlinear nature of the data and the presence of noise and missing values. While traditional models like ARIMA handle linear relationships, they struggle with the intricacies of air quality forecasting. This project explores advanced ML and DL methods to address these challenges.
 
-## Setup Instructions
+## Dataset
 
-### 1. Clone the Repository
+- **Source**: Hourly air pollutant and meteorological data from 12 monitoring sites in Beijing (2013-2017).
+- **Metrics Evaluated**: 
+  - R² Score
+  - Mean Absolute Error (MAE)
+  - Root Mean Square Error (RMSE)
 
-First, clone this repository to your local machine using the following command:
+## Methodology
 
-```bash
-git https://github.com/Xaverick/Pm2.5_prediction.git
-cd yourproject
-```
+1. **Baseline Models**:
+   - Linear Regression
+   - Random Forest Regression (tuned)
 
-### 2. Create the Conda Environment
+2. **Advanced Deep Learning Models**:
+   - Long Short-Term Memory (LSTM)
+   - Gated Recurrent Unit (GRU)
+   - Recurrent Neural Networks (RNN)
 
-To create the Conda environment, use the provided `environment.yml` file. This file includes all the necessary dependencies for the project. Run the following command in your terminal or command prompt:
+3. **Hybrid Models**:
+   - LSTM + Random Forest
+   - GRU + XGBoost
 
-```bash
-conda env create -f environment.yml
-```
+## Results Summary
 
+| Location                     | Metric | Linear Regression | Random Forest | LSTM  | LSTM+RF | XGBoost |
+|------------------------------|--------|-------------------|---------------|-------|---------|---------|
+| **Beijing**                  | R²     | 83.9              | 93.4          | 95.2  | 95.6    | 90.8    |
+|                              | MAE    | 20.54             | 12.08         | 9.63  | 9.87    | 16      |
+|                              | RMSE   | 32.04             | 18.22         | 16.63 | 17.67   | 24.81   |
+| **Ahmedabad**                | R²     | 83.9              | 85.56         | 84.2  | 87.65   | 90.99   |
+|                              | MAE    | 16.64             | 6.67          | 7.9   | 9.68    | 8.66    |
+|                              | RMSE   | 29.18             | 16.74         | 12.11 | 22.74   | 18.91   |
+| **Delhi**                    | R²     | 81.52             | 96.4          | 98.4  | 98.42   | 95.44   |
+|                              | MAE    | 26.52             | 10.46         | 7.55  | 6.61    | 11.82   |
+|                              | RMSE   | 40.68             | 17.61         | 10.96 | 11.15   | 19.8    |
 
-This snippet explains how to use the `environment.yml` file to set up the Conda environment, including a note for troubleshooting if there are issues.
+*(Additional results for Hyderabad, Aizawl, Amaravati, Amritsar, Jorapokhar, Kochi, and Kolkata are included in the detailed report.)*
 
+## Tools and Technologies
 
-### 3. Activate the Environment
+- **Programming Language**: Python
+- **Libraries**: TensorFlow, Scikit-learn, XGBoost, PyTorch
+- **Data Visualization**: Matplotlib, Seaborn
+- **Models**: Linear Regression, Random Forest, LSTM, GRU, RNN, Hybrid Models
 
-After creating the Conda environment, you need to activate it to use it. Run the following command in your terminal or command prompt:
+## Future Scope
 
-```bash
-conda activate myenv  # Replace 'myenv' with the name of your environment
-```
+1. **Real-Time Prediction Platform**:
+   - Build a real-time platform for continuous PM2.5 monitoring.
+   - Develop a user-friendly dashboard for visualizing air quality forecasts.
+
+2. **Integration with IoT Devices**:
+   - Incorporate real-time data from IoT-enabled air quality sensors.
+
+3. **Expanded Geographical Coverage**:
+   - Extend the model to more cities globally using diverse datasets.
+
+4. **Enhanced Models**:
+   - Experiment with transformers and attention mechanisms for further accuracy improvements.
+
+5. **Public Awareness Tools**:
+   - Create mobile applications to alert users about air quality and suggest preventive measures.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any suggestions or enhancements.
+
+## Contact
+
+For more information, please contact the project team at **[phicsit.skills@gmail.com](mailto:phicsit.skills@gmail.com)**.
