@@ -43,7 +43,7 @@ Accurate PM2.5 predictions are critical but challenging due to the complex, nonl
 |                              | MAE    | 26.52             | 10.46         | 7.55  | 6.61    | 11.82   |
 |                              | RMSE   | 40.68             | 17.61         | 10.96 | 11.15   | 19.8    |
 
-*(Additional results for Hyderabad, Aizawl, Amaravati, Amritsar, Jorapokhar, Kochi, and Kolkata are included in the detailed report.)*
+*(Additional results for Hyderabad, Aizawl, Amaravati, Amritsar, Jorapokhar, Kochi, and Kolkata are included in a detailed report.)*
 
 ## Tools and Technologies
 
@@ -69,11 +69,3 @@ Accurate PM2.5 predictions are critical but challenging due to the complex, nonl
 
 5. **Public Awareness Tools**:
    - Create mobile applications to alert users about air quality and suggest preventive measures.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any suggestions or enhancements.
-
-## Contact
-
-For more information, please contact the project team at **[phicsit.skills@gmail.com](mailto:phicsit.skills@gmail.com)**.
